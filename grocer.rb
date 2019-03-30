@@ -77,12 +77,6 @@ def apply_final_discounts( cart )
     total_price+=cart[k][:price]*cart[k][:count]
   end
 
-  #if total_price>100
-  #  cart.each do | k, v |
-  #    cart[k][:price]= (0.9*cart[k][:price]).round(1)
-  #  end
-  #end
-  #cart
   if total_price>100
     total_price=(total_price*0.8).round(2)
   end if
@@ -97,5 +91,9 @@ def checkout(cart, coupons)
   my_cart=apply_coupons(my_cart, coupons)
   my_cart=apply_clearance( my_cart )
   total_price=apply_final_discounts( my_cart )
+
+puts total_price
+
+  total_price
 
 end
