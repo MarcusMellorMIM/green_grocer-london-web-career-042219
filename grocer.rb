@@ -72,16 +72,20 @@ end
 def apply_final_discounts( cart )
 
   total_price=0
+  return_price=0
 
   cart.each do | k , v |
     total_price+=cart[k][:price]*cart[k][:count]
+ #   puts "#{k} #{v} total price #{total_price}"
   end
 
   if total_price>100
-    total_price=(total_price*0.8).round(2)
-  end if
-  
-  total_price
+    return_price=(total_price*0.8).round(2)
+  else
+    return_price=total_price
+  end
+
+  return_price
   
 end
 
