@@ -82,7 +82,7 @@ def apply_final_discounts( cart )
   end
 
   if total_price>100
-    return_price=(total_price*0.8).round(2)
+    return_price=(total_price*0.9).round(2)
   else
     return_price=total_price
   end
