@@ -93,8 +93,8 @@ end
 
 def checkout(cart, coupons)
   # code here
-  my_cart=consolidate_cart(cart)
-  my_cart=apply_coupons(my_cart, coupons)
+#  my_cart=consolidate_cart(cart)
+  my_cart=apply_coupons(cart, coupons)
   my_cart=apply_clearance( my_cart )
   total_price=apply_final_discounts( my_cart )
 
