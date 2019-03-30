@@ -96,8 +96,6 @@ def checkout(cart, coupons)
   my_cart=apply_clearance( my_cart )
   total_price=apply_final_discounts( my_cart )
 
-puts "HERE IS MY TOTAL PRICE #{total_price}"
-
   total_price
 
 end
