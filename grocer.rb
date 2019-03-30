@@ -33,12 +33,10 @@ def apply_coupons( cart, coupons )
       coupon_count=coupons[counter][:num]
       cart_count=return_cart[coupons[counter][:item]][:count]
     
-    
-      if coupon_count>=cart_count
-        apply_count=coupon_count
 # old code, when I hadnt understood coupon counts      
-# apply_count=[coupon_count,cart_count].min     
 #      if apply_count>0
+      if coupon_count>=cart_count
+        apply_count=[coupon_count,cart_count].min
         voucher_name = "#{coupons[counter][:item]} W/COUPON"
         if !return_cart[voucher_name]
           return_cart[voucher_name]={}
